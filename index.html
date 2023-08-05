@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="container" class="section-p1">
+        <div id="reg-box" class="section-p1">
+            <div class="heading">
+                <h2>Sign Up</h2>
+                <p id="capslock"></p>
+
+            </div>
+            <div class="form">
+                <form action="#" onsubmit="return validation()">
+                    <input type="text" name="name" placeholder="Name" autocomplete="off" required>
+                    <!-- <br> -->
+                    <input type="email" name="email" placeholder="Email" autocomplete="off" onkeyup="mail(this.value)" required>
+                    <p class="whitespace"> </p>
+
+                    <input type="password" name="password" placeholder="Password" autocomplete="off" id="password" onkeyup="validpass(this.value)" onclick="valid_show(this)" required>
+                    <p class="whitespace whitespace1"></p>
+                    <span class="showpassword">
+                        <div id="strength">
+                            <label for="" class="password_check">8 character</label><br>
+                            <label for="" class="password_check">1 lower case character</label><br>
+                            <label for="" class="password_check">1 upper case character</label><br>
+                            <label for="" class="password_check">1 numerical character</label><br>
+                            <label for="" class="password_check">1 special character</label><br>
+                        </div>
+                        <div>
+
+                            <input type="checkbox" id="visibility" onclick="showpassword()"><label id="label" for="">Show password</label>
+                        </div>
+                    </span>
+
+                    <input type="password" name="conf_password" placeholder="Confirm password" onkeyup="valid(this.value)" id="conf-password" required>
+                    <p class="valid"></p>
+                    <input type="submit" id="submit" value="Sign Up">
+                </form>
+            </div>
+            <div id="login">
+                <p>Already have an account?<a href="#"> Log in</a></p>
+            </div>
+            <div class="or">
+                <p>or</p>
+            </div>
+            <div class="google">
+                <div class="g-signin2" data-width="210" data-height="40" data-longtitle="true">
+                </div>
+            </div>
+            <p class="last">By signing up to create an account I accept company's
+                <a href="#">Term of Use and Privacy Policy</a>
+            </p>
+        </div>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer>
+        </script>
+        <script src="/index.js"></script>
+</body>
+
+</html>
